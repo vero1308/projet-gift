@@ -1,0 +1,99 @@
+<div class="big-container">
+    <form action="/create-event" method="post" class="add-event-form" enctype="multipart/form-data">
+        {{#if msg}}
+        <p class="msg {{msg.status}}">{{msg.txt}}</p>
+        {{/if}}
+        <h1>Create a new event for a relative </h1>
+        <div class="form-item-wrapper flexed-item">
+            <label for="event-name" class="event-name label">Event name</label>
+            <input name="event-name" id="event-name" type="text" class="input-text input"
+                placeholder="ex: Tatie Danielle's Birthday">
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="event-type" class="label-ref label">Réf.</label>
+            <select name="category" id="category" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="Baby Shower">Baby Shower</option>
+                <option value="Bachelor party">Bachelor party</option>
+                <option value="Batism">Batism</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Retirement">Retirement</option>
+                <option value="Wedding">Wedding</option>
+            </select>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="age" class="label-ref label">Size</label>
+            <select name="age" id="age" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="0-4">0-4 years</option>
+                <option value="5-11">5-11 years</option>
+                <option value="12-17">12-17 years</option>
+                <option value="18-35">18-35 years</option>
+                <option value="35-60">35-60 years</option>
+                <option value="61 and more">61 years and more</option>
+            </select>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="budget" class="label-ref label">Size</label>
+            <select name="Budget" id="budget" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="10€-49€">0-4 years</option>
+                <option value="50€-99€">5-11 years</option>
+                <option value="100€-149€">12-17 years</option>
+                <option value="150€-199€">18-35 years</option>
+                <option value="200€-500€">35-60 years</option>
+                <option value="500€-1000€">35-60 years</option>
+                <option value="1000€ and more">61 years and more</option>
+            </select>
+        </div>
+        <fieldset>
+            <legend>Choose 3 interests max</legend>
+            <div>
+                <input type="checkbox" id="coding" name="interest" value="coding">
+                <label for="adventure">Adventure</label>
+            </div>
+            <div>
+                <input type="checkbox" id="music" name="interest" value="music">
+                <label for="Arts and culture">Arts and culture</label>
+            </div>
+            <div>
+                <input type="checkbox" id="art" name="interest" value="art">
+                <label for="cinema">Cinema</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sports" name="interest" value="sports">
+                <label for="do it yourself">Do It Yourself</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="ecology">Ecology</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="family life">Family life</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="music">Music</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="sports">Sports</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="thrills">Thrills</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="unusual">Unusual</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cooking" name="interest" value="cooking">
+                <label for="wellbeing">Wellbeing</label>
+            </div>
+</div>
+
+<button id="btn_new_tag" class="button-primary add-category-btn">Create this category</button>
+</div>
+</div>
