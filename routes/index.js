@@ -36,12 +36,6 @@ router.get("/create-event", (req, res) => {
   res.render("create-events");
 });
 
-router.get("/auth/signin", (req, res) => {
-  res.render("signin");
-});
 
-router.get("/auth/signup", (req, res) => {
-  res.render("signup");
-});
 
 module.exports = router;
