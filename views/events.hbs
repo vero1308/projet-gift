@@ -1,2 +1,28 @@
 <h1>My events</h1>
 
+<section class="events">
+    <div class="events-infos">
+
+        <p class="events-subtitle">Find here all the events you have created.</p>
+    </div>
+
+    {{!-- {{#unless events}}
+    <p>Sorry, no event here yet !</p>
+    {{/unless}} --}}
+
+
+    <div id="events_grid" class="events-grid flexed-item">
+        {{#each events}}
+
+        <a href="/event/{{this._id}}" class="events-item-wrapper">
+            <div class="event-image">
+                <img src="{{this.image}}" alt="{{this.name}}">
+            </div>
+
+            <p class="event-name">{{this.name}}</p>
+            <p class="event-age">{{this.age}}</p>
+            <p class="event-budget">{{this.budget}}</p>
+            <p class="event-interest">{{this.interest}}</p>
+        </a> {{/each}}
+    </div>
+</section>

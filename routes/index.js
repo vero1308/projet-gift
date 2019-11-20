@@ -28,13 +28,7 @@ mongoose
     console.error("Error connecting to mongo", err);
   });
 
-router.get("/events", (req, res) => {
-  res.render("event");
-});
 
-router.get("/create-event", (req, res) => {
-  res.render("create-events");
-});
 
 
 

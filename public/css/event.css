@@ -1,0 +1,17 @@
+.events-grid {
+  flex-wrap: wrap;
+}
+
+.events-item-wrapper {
+  cursor: pointer;
+  width: 20%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  transition: all 0.2s ease-in;
+  transition-property: box-shadow;
+}
+
+.form-item-wrapper {
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}

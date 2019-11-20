@@ -1,0 +1,16 @@
+<h1>Proposals</h1>
+
+<div id="proposal_grid" class="proposal-grid flexed-item">
+    {{#each events.proposals}}
+    <div class="product-image">
+        <img src="{{this.image}}" alt="{{this.name}}">
+    </div>
+    <p class="product-name">{{this.name}}</p>
+    <p class="product-description">{{this.description}}</p>
+    <a href="{{this.links}}">See more</a>
+    <p class="product-event">{{this.event}}</p>
+    <p class="product-age">{{this.age}}</p>
+    <p class="product-budget">{{this.budget}}</p>
+    <p class="product-interest">{{this.interest}}</p>
+    {{/each}}
+</div>

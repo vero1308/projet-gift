@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
   name: String,
-  event: {
-    String,
+  type: {
+    type: String,
     enum: [
       "Baby shower",
       "Bachelor party",
@@ -15,15 +15,15 @@ const eventSchema = new Schema({
     ]
   },
   age: {
-    String,
+    type: String,
     enum: ["0-4", "5-11", "12-17", "18-35", "36-60", "61 and more"]
   },
   budget: {
-    String,
+    type: String,
     enum: [
       "10€-49€",
       "50€-99€",
-      "100-149€",
+      "100€-149€",
       "150€-199€",
       "200€-500€",
       "500€-1000€",
@@ -31,7 +31,12 @@ const eventSchema = new Schema({
     ]
   },
   interest: {
-    String,
+    type: [String],
+    image: {
+      type: String,
+      default:
+        "https://s1.qwant.com/thumbr/0x0/3/c/47fe4a877a815796e4e74607d1d529b44437e34ba4882fdec70e94a8080d5c/noimage.gif?u=http%3A%2F%2Fmoorestown-mall.com%2Fnoimage.gif&q=0&b=1&p=0&a=1"
+    },
     enum: [
       "Adventure",
       "Arts and culture",
@@ -45,7 +50,8 @@ const eventSchema = new Schema({
       "Unusual",
       "Wellbeing"
     ]
-  }
+  },
+  proposals: [{ type: Schema.Types.ObjectId, ref: "product" }]
 });
 
 const event = mongoose.model("event", eventSchema);

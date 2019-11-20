@@ -62,7 +62,7 @@ server.use(function exposeFlashMessage(req, res, next) {
 // Login
 // ------------------------------------------
 server.use(function checkLoggedIn(req, res, next) {
-  console.log(req.session.currentUser);
+  //console.log(req.session.currentUser);
   res.locals.isLoggedIn = Boolean(req.session.currentUser);
   res.locals.isAdmin = Boolean(
     req.session.currentUser && req.session.currentUser.role === "admin"
@@ -74,6 +74,8 @@ const indexRouter = require(`./routes/index`);
 server.use(`/`, indexRouter);
 const authRouter = require(`./routes/auth`);
 server.use("/auth", authRouter);
+const eventRouter = require(`./routes/event`);
+server.use(eventRouter);
 
 // module.exports = server;
 server.listen(8010);

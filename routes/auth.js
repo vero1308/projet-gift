@@ -18,7 +18,6 @@ router.post("/signup", (req, res) => {
   //   res.redirect("/signup");
   //   return;
   // } else {
-  console.log(user);
   userModel
     .findOne({ email: user.email })
     .then(dbRes => {
@@ -64,6 +63,7 @@ router.post("/signin", (req, res) => {
         // encryption says : password match success
         req.flash("success", `welcome ${dbRes.email}`);
         req.session.currentUser = dbRes; // user is now in session... until session.destroy
+
         return res.redirect("/events");
       } else {
         // encryption says : password match failde

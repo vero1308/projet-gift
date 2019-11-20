@@ -3,35 +3,34 @@
 {{!-- END HEADER --}}
 <div class="big-container">
   <header class="header">
-    <nav class="nav-wrapper flexed-item">
-      <div class="nav-link-wrapper flexed-item">
-        <div class="nav-logo">
-          <a href="/" class="flexed-item">
-            <span class="logo-item circle"></span>
-            <h2 class="logo-item">GIFT IT</h2>
-          </a>
-        </div>
-        <ul class="nav-link flexed-item">
+    <nav class="navigation">
 
-          {{#if isLoggedIn}}
-          <li class="nav-item animated-link nav-item-admin">
-            <a href="/events">My Events</a>
-          </li>
-          <li class="nav-item animated-link nav-item-admin">
-            <a href="/create-event">New event</a>
-          </li>
-          {{/if}}
-        </ul>
+      <div class="nav-logo">
+        <a href="/" class="title-nav">
+          <h2 class="main-title">GIFT IT</h2>
+        </a>
       </div>
+      <ul class="nav-link flexed-item">
+
+        {{#if isLoggedIn}}
+        <div class="newnav">
+          <li class="nav-myevents">
+            <a href="/events" class="button-nav">My events</a>
+          </li>
+          <li class="nav-newevent">
+            <a href="/create-event" class="button-nav">New event</a>
+          </li>
+        </div>
+        {{/if}}
+      </ul>
+
       <div class="flexed-item nav-end">
         {{#unless isLoggedIn}}
-        <a href="/auth/signin" id="nav_login" class="button-ternary flexed-item nav-end-item">
-          <span class="btn-text">Sign in</span>
-        </a>
+        <a href="/auth/signin" id="nav_login" class="button-nav">Sign in</a>
         {{/unless}}
         {{#if isLoggedIn}}
-        <a href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
-          <span class="btn-text">Log out</span>
+        <a href="/auth/logout" id="nav_logout" class="logout">
+          <span class="button-nav">Log out</span>
         </a>
         {{/if}}
       </div>
