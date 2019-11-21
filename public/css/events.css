@@ -4,6 +4,19 @@
   display: block;
 }
 
+.big-container {
+  display: flex;
+  border: 1px solid black;
+}
+
+.events-title {
+  margin: 20px;
+}
+
+.events-subtitle {
+  margin-bottom: 10px;
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: 30% 30% 30%;

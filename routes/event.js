@@ -29,6 +29,7 @@ router.post("/create-event", (req, res) => {
     budget: req.body.budget,
     interest: req.body.interest
   };
+  console.log(req.body)
   //   if (req.file) newEvent.image = req.file.secure_url;
   productModel
     .find({
@@ -40,20 +41,22 @@ router.post("/create-event", (req, res) => {
       ]
     })
     .then(proposals => {
-      console.log(proposals);
-      newEvent.proposals = proposals;
+      // console.log("ici")
+      // console.log(newEvent.proposals);
+      const proposalsId = proposals.map(proposal => proposal._id);
+      newEvent.proposals = proposalsId;
+      //  console.log( proposalsId, "--------------------")
       eventModel
         .create(newEvent)
         .then(response => {
-          console.log("session", req.session.currentUser);
+        
+          // console.log("session", req.session.currentUser);
+          console.log("ici")
           userModel
             .findByIdAndUpdate(req.session.currentUser._id, {
-              $push: { events: response.id }
-            })
-            .then(dbRes => {
-              req.flash("success", "event successfully created");
-              // res.render("events");
-              res.redirect("/events");
+            $push: { events: response._id }
+            }).then(updatedUser => {
+              res.redirect("/event/" + response._id)
             })
             .catch(error => console.log(error));
         })
