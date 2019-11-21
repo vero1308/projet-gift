@@ -1,12 +1,14 @@
 
 
 .home-container {
-  height: calc(100vh - (84px));
-  /* overflow: hidden; */
+  height: calc(110vh - (84px));
+  overflow: hidden;
   background-image: url(./../images/gift-giving-netherlands.jpg);
   background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
-  width: 100%;
+  padding-top: 60px; 
+
 }
 .home-text {
   display: flex;
@@ -31,11 +33,15 @@ button {
 }
       
 .footer {
-  background-color: #DEBB1E;
-  padding-top: 20px;
-  padding-bottom : 20px;
+  bottom: -1px;
+  height: 30px;
+  font-size: 0.8rem;
+  position: sticky;
+  background: #DEBB1E;
+  color: whitesmoke;
   display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  top: calc(100vh - 60px);
   justify-content: flex-end;
-  padding-right: 20px;
-  color: white;
 }

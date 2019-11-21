@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const productModel = require("../models/product");
 const bcrypt = require("bcrypt");
-const uploader = require("./../config/cloudinary");
+const cloudinary = require("./../config/cloudinary");
 const userModel = require("../models/user");
 const event = require("../views/event");
 
@@ -12,7 +12,7 @@ router.get("/signup", (req, res) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", (req, res) => {
+router.post("/signup", cloudinary.single("avatar"), (req, res) => {
   const user = req.body; // req.body contains the submited informations (out of post request)
   // if (!user.email || !user.password) {
   //   res.redirect("/signup");
@@ -42,7 +42,7 @@ router.get("/signin", (req, res) => {
   res.render("auth/signin");
 });
 
-router.post("/signin", (req, res) => {
+router.post("/signin", cloudinary.single("avatar"), (req, res) => {
   const user = req.body;
   if (!user.email || !user.password) {
     // one or more field is missing

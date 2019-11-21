@@ -20,7 +20,7 @@ router.get("/create-event", (req, res) => {
   res.render("event");
 });
 
-router.post("/create-event", (req, res) => {
+router.post("/create-event", cloudinary.single("avatar"), (req, res) => {
   const newEvent = {
     name: req.body.name,
     type: req.body.type,
@@ -49,14 +49,13 @@ router.post("/create-event", (req, res) => {
       eventModel
         .create(newEvent)
         .then(response => {
-        
           // console.log("session", req.session.currentUser);
           console.log("ici")
           userModel
             .findByIdAndUpdate(req.session.currentUser._id, {
             $push: { events: response._id }
             }).then(updatedUser => {
-              res.redirect("/event/" + response._id)
+              res.redirect("/event/" + response._id) 
             })
             .catch(error => console.log(error));
         })
@@ -84,7 +83,7 @@ router.get("/event/:id", (req, res) => {
     .findById(req.params.id)
     .populate("proposals")
     .then(dbRes => {
-      console.log(dbRes);
+      console.log(dbRes.proposals);
       res.render("proposals", {
         events: dbRes,
         css: ["event"]
