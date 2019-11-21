@@ -64,4 +64,4 @@ const eventRouter = require(`./routes/event`);
 server.use(eventRouter);
 
 // module.exports = server;
-server.listen(8010);
+server.listen(process.env.PORT);
