@@ -24,7 +24,7 @@ router.post("/create-event", (req, res) => {
   const newEvent = {
     name: req.body.name,
     type: req.body.type,
-    image: req.body.image,
+    image: req.body.interest.image,
     age: req.body.age,
     budget: req.body.budget,
     interest: req.body.interest

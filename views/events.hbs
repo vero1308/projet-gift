@@ -1,38 +1,41 @@
-<div class="big-container">
-    <div class="events-all">
-        <h1 class="events-title">My events</h1>
+<div class="events-all">
+    <h1 class="events-title">My events</h1>
 
-        <section class="events">
-            <div class="events-infos">
-                <p class="events-subtitle">Find here all the events you have created.</p>
-            </div>
+    <section class="events">
+        <div class="events-infos">
+            <p class="events-subtitle">Find here all the events you have created.</p>
+        </div>
 
-            {{!-- {{#unless events}}
+        {{!-- {{#unless events}}
     <p>Sorry, no event here yet !</p>
     {{/unless}} --}}
 
-            <div id="events_grid" class="events-list">
+        <div id="events_grid" class="events_grid">
+            <div class="grid-inside">
+
                 {{#each events}}
-                <div class="table">
-                    <a href="/event/{{this._id}}" class="my-events">
+                <div class="oneEvent">
+                    <div class="table">
+                        <a href="/event/{{this._id}}" class="my-events" />
                         <div class="event-image">
-                            <img src="{{this.image}}" alt="{{this.name}}">
+                            <img src={{this.image}} alt="{{this.name}}">
                         </div>
+                    </div>
+                    <div class="table">
+                        <p class="event-name">Event: {{this.name}}</p>
+                    </div>
+                    <div class="table">
+                        <p class="event-age">Age: {{this.age}}</p>
+                    </div>
+                    <div class="table">
+                        <p class="event-budget">Budget: {{this.budget}}</p>
+                    </div>
+                    <div class="table">
+                        <p class="event-interest">Interest: {{this.interest}}</p>
+                    </div>
                 </div>
-                <div class="table">
-                    <p class="event-name">{{this.name}}</p>
-                </div>
-                <div class="table">
-                    <p class="event-age">{{this.age}}</p>
-                </div>
-                <div class="table">
-                    <p class="event-budget">{{this.budget}}</p>
-                </div>
-                <div class="table">
-                    <p class="event-interest">{{this.interest}}</p>
-                </div>
-                </a> {{/each}}
+                {{/each}}
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </div>
