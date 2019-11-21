@@ -1,20 +1,33 @@
-.product-image {
+.event-image {
   width: 200px;
   max-width: 100%;
   display: block;
 }
-
-.big-container {
+.event-baseline {
+  display: flex;
+  flex-direction: column;
+}
+#events-all {
+  background-image: url(/images/canon-confettis-rose-baby-shower-gender-reveal_1024x1024.jpg);
+  background-size: cover;
+}
+/* .big-container {
   display: flex;
   border: 1px solid black;
-}
+} */
 
 .events-title {
   margin: 20px;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  right: 0;
 }
 
 .events-subtitle {
   margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 60px;
 }
 
 .events-grid {
@@ -22,23 +35,30 @@
   grid-template-columns: 30% 30% 30%;
   border-radius: 20px;
 }
-.events-all {
-  border: 1px turquoise;
-}
 
 .grid-inside {
-  border: 1px solid darkslateblue;
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  border-radius: 20px;
   padding: 20px;
 }
 
 .oneEvent {
-  border: 1px solid darkslateblue;
+  border: 1px solid #debb1e;
   margin: 5px;
   padding: 10px;
   border-radius: 20px;
+  background-color: white;
+  width: 80%;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.oneEvent-image {
+  display: flex;
+  flex-direction: row;
 }
