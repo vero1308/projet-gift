@@ -1,0 +1,23 @@
+.proposals {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+.all-proposals {
+    border: 1px solid black;
+    margin : 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.product-description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image {
+    text-align: center;
+}
