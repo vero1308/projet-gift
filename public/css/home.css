@@ -1,5 +1,3 @@
-
-
 .home-container {
   height: calc(100vh - (84px));
   /* overflow: hidden; */
@@ -20,22 +18,25 @@ button {
   margin-top: 20px;
   border-radius: 10px;
   background-color: #1a1a1a;
-  
 }
 
 .test-button {
-  color: #DEDEDE;
+  color: #dedede;
   text-decoration: none;
   padding-right: 15px;
   padding-left: 15px;
 }
-      
+
 .footer {
-  background-color: #DEBB1E;
-  padding-top: 20px;
-  padding-bottom : 20px;
+  bottom: -1px;
+  height: 30px;
+  font-size: 0.8rem;
+  position: sticky;
+  background: #debb1e;
+  color: whitesmoke;
   display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  top: calc(100vh - 60px);
   justify-content: flex-end;
-  padding-right: 20px;
-  color: white;
 }

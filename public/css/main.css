@@ -16,8 +16,12 @@ body {
   margin: 0;
   background: darkslateblue;
   display: flex;
-  flex-flow: row wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
+
 .newnav {
   list-style: none;
   margin: 0;
