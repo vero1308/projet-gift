@@ -1,7 +1,6 @@
 .events-grid {
   flex-wrap: wrap;
 }
-
 .events-item-wrapper {
   cursor: pointer;
   width: 20%;
@@ -10,8 +9,16 @@
   transition: all 0.2s ease-in;
   transition-property: box-shadow;
 }
-
 .form-item-wrapper {
   flex-direction: column;
   margin-bottom: 1.1rem;
+}
+.add-event-form {
+  margin: 20px;
+}
+.input-text {
+  width: 300px;
+}
+.event-title {
+  margin-bottom: 20px;
 }

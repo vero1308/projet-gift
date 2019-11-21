@@ -1,17 +1,14 @@
 {{!-- HEADER --}}
-
 {{!-- END HEADER --}}
 <div class="big-container">
   <header class="header">
     <nav class="navigation">
-
       <div class="nav-logo">
         <a href="/" class="title-nav">
           <h2 class="main-title">GIFT IT</h2>
         </a>
       </div>
       <ul class="nav-link flexed-item">
-
         {{#if isLoggedIn}}
         <div class="newnav">
           <li class="nav-myevents">
@@ -23,14 +20,13 @@
         </div>
         {{/if}}
       </ul>
-
       <div class="flexed-item nav-end">
         {{#unless isLoggedIn}}
         <a href="/auth/signin" id="nav_login" class="button-nav">Sign in</a>
         {{/unless}}
         {{#if isLoggedIn}}
-        <a href="/auth/logout" id="nav_logout" class="logout">
-          <span class="button-nav">Log out</span>
+        <a href="/auth/logout" id="nav_logout" class="button-nav">
+          <span>Log out</span>
         </a>
         {{/if}}
       </div>

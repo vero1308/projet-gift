@@ -1,17 +1,24 @@
-<form method="post" action="/auth/signup" class="form">
-    <h1 class="title">Signup</h1>
-    <label for="email">email</label>
-    <input class="input" name="email" type="email" required placeholder="ex: gift@giftmail.com">
-    <label for="password">password</label>
-    <input class="input" name="password" type="password" required placeholder="12345">
-    {{!-- <div class="row"> --}}
-    {{!-- <label for="avatar">avatar</label>
+<div id="info_signup">
+    <div id="signup_box">
+        <div id="form">
+            <form class="form" method="post" action="/auth/signup" class="form">
+                <h1 class="title">Signup</h1>
+                <label class="label" for="email">email</label>
+                <input class="input" name="email" type="email" required placeholder="ex: gift@giftmail.com">
+                <label class="label" for="password">password</label>
+                <input class="input" name="password" type="password" required placeholder="12345">
+                {{!-- <div class="row"> --}}
+                {{!-- <label for="avatar">avatar</label>
         <i id="avatar-icon" class="is-clickable toggle-active fa fa-user fa-lg"></i>
         <input id="input-file" type="file" class="is-hidden" name="avatar">
     </div> --}}
-    <button class="btn">go !</button>
-    <hr>
-</form>
-<p>
-    Already have an account ? <a class="link" href="/auth/signin">please signin !</a>
-</p>
+                <button class="btn">Go !</button>
+                <hr>
+            </form>
+        </div>
+        <p>
+            Already have an account ? <a class="link" href="/auth/signin">please signin !</a>
+        </p>
+    </div>
+</div>
+</div>

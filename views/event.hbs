@@ -3,18 +3,15 @@
         {{#if msg}}
         <p class="msg {{msg.status}}">{{msg.txt}}</p>
         {{/if}}
-        <h1>Create a new event for a relative </h1>
+        <h1 class="event-title">Create a new event for a relative </h1>
         <div class="form-item-wrapper flexed-item">
             <label for="name" class="name label">Your event name</label>
-            <input name="name" id="name" type="text" class="input-text input"
-                placeholder="ex: Tatie Danielle's Birthday">
+            <input name="name" id="name" type="text" class="input-text" placeholder="ex: Tatie Danielle's Birthday">
         </div>
-
         <div class="form-item-wrapper flexed-item">
             <label for="event-image" class="image label">Image</label>
             <input name="image" id="event-image" type="file" class="event-image">
         </div>
-
         <div class="form-item-wrapper flexed-item">
             <label for="type" class="type label">Event</label>
             <select name="type" id="category" class="select" required>
@@ -27,7 +24,6 @@
                 <option value="Wedding">Wedding</option>
             </select>
         </div>
-
         <div class="form-item-wrapper flexed-item">
             <label for="age" class="age">Age</label>
             <select name="age" id="age" class="select" required>
@@ -54,7 +50,7 @@
             </select>
         </div>
         <fieldset>
-            <legend>Choose 3 interests max</legend>
+            <legend class="legend">Choose 3 interests max</legend>
             <div>
                 <input type="checkbox" id="adventure" name="interest" value="Adventure">
                 <label for="adventure">Adventure</label>
@@ -99,9 +95,8 @@
                 <input type="checkbox" id="wellbeing" name="interest" value="Wellbeing">
                 <label for="wellbeing">Wellbeing</label>
             </div>
-
             <div>
-                <button id="btn_new_tag" class="button-primary add-category-btn">Create your event</button>
+                <button id="btn_new_tag" class="test-button">Create your event</button>
             </div>
 </div>
 </div>

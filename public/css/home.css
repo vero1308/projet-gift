@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   width: 100%;
 }
-
 .home-text {
   display: flex;
   text-align: center;
@@ -14,4 +13,24 @@
   flex-direction: column;
   padding-top: 30px;
   font-size: 25px;
+}
+button {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+.test-button {
+  color: #dedede;
+  text-decoration: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footer {
+  background-color: #debb1e;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: white;
 }

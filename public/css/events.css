@@ -1,0 +1,23 @@
+.events-title {
+  margin: 20px;
+}
+.events-subtitle {
+  margin-bottom: 10px;
+}
+.events {
+  margin: 20px;
+}
+.my-events {
+  text-decoration: none;
+  color: black;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.events-list {
+  border: 1px solid grey;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.events-all {
+  height: calc(100vh - (84px));
+}
