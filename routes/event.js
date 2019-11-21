@@ -20,17 +20,17 @@ router.get("/create-event", (req, res) => {
   res.render("event");
 });
 
-router.post("/create-event", (req, res) => {
+router.post("/create-event", cloudinary.single("image"), (req, res) => {
+  console.log(req.body);
+
   const newEvent = {
     name: req.body.name,
     type: req.body.type,
-    image: req.body.interest.image,
     age: req.body.age,
     budget: req.body.budget,
     interest: req.body.interest
   };
-  console.log(req.body)
-  //   if (req.file) newEvent.image = req.file.secure_url;
+  if (req.file) newEvent.image = req.file.secure_url;
   productModel
     .find({
       $and: [
@@ -49,14 +49,14 @@ router.post("/create-event", (req, res) => {
       eventModel
         .create(newEvent)
         .then(response => {
-        
           // console.log("session", req.session.currentUser);
-          console.log("ici")
+          console.log("ici");
           userModel
             .findByIdAndUpdate(req.session.currentUser._id, {
-            $push: { events: response._id }
-            }).then(updatedUser => {
-              res.redirect("/event/" + response._id)
+              $push: { events: response._id }
+            })
+            .then(updatedUser => {
+              res.redirect("/event/" + response._id);
             })
             .catch(error => console.log(error));
         })

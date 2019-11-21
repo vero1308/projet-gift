@@ -9,7 +9,6 @@ cloudinary.config({
 const storage = cloudinaryStorage({
   cloudinary,
   folder: "gift"
-
   //  params below is only needed if uploading media types other than images (video, audio...)
   // params: {
   //     ressource_type: "raw"

@@ -30,13 +30,9 @@ const eventSchema = new Schema({
       "1000€ and more"
     ]
   },
+
   interest: {
     type: [String],
-    image: {
-      type: String,
-      default:
-        "https://s1.qwant.com/thumbr/0x0/3/c/47fe4a877a815796e4e74607d1d529b44437e34ba4882fdec70e94a8080d5c/noimage.gif?u=http%3A%2F%2Fmoorestown-mall.com%2Fnoimage.gif&q=0&b=1&p=0&a=1"
-    },
     enum: [
       "Adventure",
       "Arts and culture",
@@ -50,6 +46,11 @@ const eventSchema = new Schema({
       "Unusual",
       "Wellbeing"
     ]
+  },
+  image: {
+    type: String,
+    default:
+      "https://s1.qwant.com/thumbr/0x0/3/c/47fe4a877a815796e4e74607d1d529b44437e34ba4882fdec70e94a8080d5c/noimage.gif?u=http%3A%2F%2Fmoorestown-mall.com%2Fnoimage.gif&q=0&b=1&p=0&a=1"
   },
   proposals: [{ type: Schema.Types.ObjectId, ref: "product" }]
 });
