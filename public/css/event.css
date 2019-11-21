@@ -13,12 +13,15 @@
   flex-direction: column;
   margin-bottom: 1.1rem;
 }
+
 .add-event-form {
-  margin: 20px;
+  margin : 20px;
 }
+
 .input-text {
   width: 300px;
 }
+
 .event-title {
-  margin-bottom: 20px;
+  margin-bottom : 20px;
 }

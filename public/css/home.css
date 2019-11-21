@@ -1,3 +1,5 @@
+
+
 .home-container {
   height: calc(100vh - (84px));
   /* overflow: hidden; */
@@ -18,17 +20,20 @@ button {
   margin-top: 20px;
   border-radius: 10px;
   background-color: #1a1a1a;
+  
 }
+
 .test-button {
-  color: #dedede;
+  color: #DEDEDE;
   text-decoration: none;
   padding-right: 15px;
   padding-left: 15px;
 }
+      
 .footer {
-  background-color: #debb1e;
+  background-color: #DEBB1E;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom : 20px;
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;

@@ -27,6 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20px;
 }
 .title {
   text-align: center;
@@ -34,4 +35,12 @@
   color: turquoise;
   margin: 0;
   width: 100%;
+}
+.formular {
+    height: calc(100vh - (84px));
+    margin: 20px;
+}
+
+.no-account {
+    margin: 20px;
 }
