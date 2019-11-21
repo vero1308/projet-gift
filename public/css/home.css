@@ -1,3 +1,5 @@
+
+
 .home-container {
   height: calc(100vh - (84px));
   /* overflow: hidden; */
@@ -14,4 +16,28 @@
   flex-direction: column;
   padding-top: 30px;
   font-size: 25px;
+}
+
+button {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  
+}
+
+.test-button {
+  color: #DEDEDE;
+  text-decoration: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+      
+.footer {
+  background-color: #DEBB1E;
+  padding-top: 20px;
+  padding-bottom : 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: white;
 }

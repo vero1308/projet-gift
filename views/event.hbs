@@ -3,10 +3,10 @@
         {{#if msg}}
         <p class="msg {{msg.status}}">{{msg.txt}}</p>
         {{/if}}
-        <h1>Create a new event for a relative </h1>
+        <h1 class="event-title">Create a new event for a relative </h1>
         <div class="form-item-wrapper flexed-item">
             <label for="name" class="name label">Your event name</label>
-            <input name="name" id="name" type="text" class="input-text input"
+            <input name="name" id="name" type="text" class="input-text"
                 placeholder="ex: Tatie Danielle's Birthday">
         </div>
 
@@ -54,7 +54,7 @@
             </select>
         </div>
         <fieldset>
-            <legend>Choose 3 interests max</legend>
+            <legend class="legend">Choose 3 interests max</legend>
             <div>
                 <input type="checkbox" id="adventure" name="interest" value="Adventure">
                 <label for="adventure">Adventure</label>
@@ -101,7 +101,7 @@
             </div>
 
             <div>
-                <button id="btn_new_tag" class="button-primary add-category-btn">Create your event</button>
+                <button id="btn_new_tag" class="test-button">Create your event</button>
             </div>
 </div>
 </div>
