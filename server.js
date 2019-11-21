@@ -1,6 +1,6 @@
 // initial config
 require("dotenv").config(); // import all key/value pairs from .env in process.env : really usefull when going online :)
-// require("./config/mongo"); // database connection setup
+require("./config/mongo"); // database connection setup
 
 // dependencies injection
 
@@ -13,20 +13,6 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useCreateIndex: true
-  })
-  .then(x => {
-    console.log(
-      `Connected to Mongo! Database name: "${x.connections[0].name}"`
-    );
-  })
-  .catch(err => {
-    console.error("Error connecting to mongo", err);
-  });
 
 server.set("views", path.join(__dirname, "views"));
 server.set("view engine", "hbs");
