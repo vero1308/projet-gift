@@ -10,6 +10,7 @@ background: darkslateblue
 body {
   color: grey;
   font-family: "Marcellus", serif;
+  position: relative;
 }
 .navigation {
   list-style: none;

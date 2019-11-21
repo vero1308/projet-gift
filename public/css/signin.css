@@ -5,6 +5,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 }
 
 #signin_box {

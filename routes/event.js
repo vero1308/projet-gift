@@ -84,7 +84,7 @@ router.get("/event/:id", (req, res) => {
     .findById(req.params.id)
     .populate("proposals")
     .then(dbRes => {
-      console.log(dbRes);
+      console.log(dbRes.proposals);
       res.render("proposals", {
         events: dbRes,
         css: ["event"]

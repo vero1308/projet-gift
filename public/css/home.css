@@ -1,10 +1,12 @@
 .home-container {
-  height: calc(100vh - (84px));
-  /* overflow: hidden; */
+  height: calc(110vh - (84px));
+  overflow: hidden;
   background-image: url(./../images/gift-giving-netherlands.jpg);
   background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
-  width: 100%;
+  padding-top: 60px; 
+
 }
 .home-text {
   display: flex;
