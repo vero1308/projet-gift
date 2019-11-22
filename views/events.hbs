@@ -17,28 +17,26 @@
                 {{#each events}}
                 <div class="oneEvent">
                     <div class="oneEvent-image">
-                        <div class="table">
-                            <a href="/event/{{this._id}}" class="my-events" />
-                            <div class="event-image">
+                        <div class="event-image">
+                            <a href="/event/{{this._id}}" class="my-events">
                                 <img src="{{this.image}}" alt="{{this.name}}">
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="table">
+                    <div class="text">
+
                         <p class="event-name">Event: {{this.name}}</p>
-                    </div>
-                    <div class="table">
+
                         <p class="event-age">Age: {{this.age}}</p>
-                    </div>
-                    <div class="table">
+
                         <p class="event-budget">Budget: {{this.budget}}</p>
-                    </div>
-                    <div class="table">
+
                         <p class="event-interest">Interest:
                             {{#each this.interest}}
                             {{this}}&nbsp;
                             {{/each}}
                         </p>
+
                     </div>
                 </div>
                 {{/each}}
