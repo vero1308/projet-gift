@@ -1,0 +1,171 @@
+<form method="post" action="/edit-event/{{event._id}}" class="form">
+<h1 class="edit-title">Edit an event</h1>
+        {{#if msg}}
+        <p class="msg {{msg.status}}">{{msg.txt}}</p>
+        {{/if}}
+        <h1 class="event-title">Update your event </h1>
+        <div class="form-item-wrapper flexed-item">
+            <label for="name" class="name label" id="check">Your event name</label>
+            <input name="name" id="name" type="text" class="input-text" placeholder="ex: Tatie Danielle's Birthday">
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="event-image" class="image-label"  id="check">Image</label>
+            <input name="image" id="event-image" type="file" class="event-image">
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="type" class="type label"  id="check">Event</label>
+            <select name="type" id="category" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="Baby shower">Baby Shower</option>
+                <option value="Bachelor party">Bachelor party</option>
+                <option value="Batism">Batism</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Retirement">Retirement</option>
+                <option value="Wedding">Wedding</option>
+            </select>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="age" class="age"  id="check">Age</label>
+            <select name="age" id="age" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="0-4">0-4 years</option>
+                <option value="5-11">5-11 years</option>
+                <option value="12-17">12-17 years</option>
+                <option value="18-35">18-35 years</option>
+                <option value="36-60">36-60 years</option>
+                <option value="61 and more">61 years and more</option>
+            </select>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <label for="budget" class="budget"  id="check">Budget</label>
+            <select name="budget" id="budget" class="select" required>
+                <option value="-1" disabled selected>Choose a category</option>
+                <option value="10€-49€">10€-49€-</option>
+                <option value="50€-99€">50€-99€</option>
+                <option value="100€-149€">100€-149€</option>
+                <option value="150€-199€">150€-199€</option>
+                <option value="200€-500€">200€-500€</option>
+                <option value="500€-1000€">500€-1000€</option>
+                <option value="1000€ and more">1000€ and more</option>
+            </select>
+        </div>
+        <div class="interests">
+        <fieldset>
+            <legend class="legend">Choose 3 interests max</legend>
+            <div>
+                <input type="checkbox" id="adventure" name="interest" value="Adventure">
+                <label for="adventure">Adventure</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Arts and culture" name="interest" value="Arts and culture">
+                <label for="Arts and culture">Arts and culture</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cinema" name="interest" value="Cinema">
+                <label for="cinema">Cinema</label>
+            </div>
+            <div>
+                <input type="checkbox" id="do it yourself" name="interest" value="Do It Yourself">
+                <label for="do it yourself">Do It Yourself</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ecology" name="interest" value="Ecology">
+                <label for="ecology">Ecology</label>
+            </div>
+            <div>
+                <input type="checkbox" id="family life" name="interest" value="Family life">
+                <label for="family life">Family life</label>
+            </div>
+            <div>
+                <input type="checkbox" id="music" name="interest" value="Musique">
+                <label for="music">Music</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sports" name="interest" value="Sports">
+                <label for="sports">Sports</label>
+            </div>
+            <div>
+                <input type="checkbox" id="thrills" name="interest" value="Thrills">
+                <label for="thrills">Thrills</label>
+            </div>
+            <div>
+                <input type="checkbox" id="unusual" name="interest" value="Unusual">
+                <label for="unusual">Unusual</label>
+            </div>
+            <div>
+                <input type="checkbox" id="wellbeing" name="interest" value="Wellbeing">
+                <label for="wellbeing">Wellbeing</label>
+            </div>
+            </div>
+</div>
+</div>
+
+{{!-- <label for="event-name" id="event-name" id="check" required>
+{{#each events}}
+{{#compare this.name ../event.name operator="==="}}
+<option value="{{this._id}}" selected>{{this.name}}</option>
+{{/compare}}
+{{#compare this.name ../event.name operator="!="}}
+<option value="{{this._id}}">{{this.name}}</option>
+{{/compare}}
+{{/each}}
+</label>
+
+<label for="event-image" id="event-image" id="check" required>
+{{#each events}}
+{{#compare this.image ../event.image operator="==="}}
+<option value="{{this._id}}" selected>{{this.image}}</option>
+{{/compare}}
+{{#compare this.image ../event.image operator="!="}}
+<option value="{{this._id}}">{{this.image}}</option>
+{{/compare}}
+{{/each}}
+</label>
+
+<label for="event-type" id="event-type" id="check" required>
+{{#each events}}
+{{#compare this.type ../event.type operator="==="}}
+<option value="{{this._id}}" selected>{{this.type}}</option>
+{{/compare}}
+{{#compare this.type ../event.type operator="!="}}
+<option value="{{this._id}}">{{this.type}}</option>
+{{/compare}}
+{{/each}}
+</label>
+
+<label for="event-age" id="event-age" id="check" required>
+{{#each events}}
+{{#compare this.age ../event.age operator="==="}}
+<option value="{{this._id}}" selected>{{this.age}}</option>
+{{/compare}}
+{{#compare this.age ../event.age operator="!="}}
+<option value="{{this._id}}">{{this.age}}</option>
+{{/compare}}
+{{/each}}
+</label>
+
+<label for="event-budget" id="event-budget" id="check" required>
+{{#each events}}
+{{#compare this.budget ../event.budget operator="==="}}
+<option value="{{this._id}}" selected>{{this.budget}}</option>
+{{/compare}}
+{{#compare this.budget ../event.budget operator="!="}}
+<option value="{{this._id}}">{{this.budget}}</option>
+{{/compare}}
+{{/each}}
+</label>
+
+<label for="event-interest" id="event-interest" id="check" required>
+{{#each events}}
+{{#compare this.interest ../event.interest operator="==="}}
+<option value="{{this._id}}">{{this.interest}}</option>
+{{/compare}}
+{{#compare this.interest ../event.interest operator="!="}}
+<option value="{{this._id}}">{{this.interest}}</option>
+{{/compare}}
+{{/each}}
+</label> --}}
+ <div>
+                <button id="btn_new_tag" class="test-button">Update your event</button>
+            </div>
+</form>

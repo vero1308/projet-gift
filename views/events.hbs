@@ -25,20 +25,18 @@
                 <div class="text">
 
                     <p class="event-name">Event:
-                        {{#each this.name}}
-                        {{this}}&nbsp;
-                        {{/each}}</p>
+                        {{this.name}}
+
+                          <p class="event-type">Type:
+                        {{this.type}}
+                    </p>
 
                     <p class="event-age">Age:
-                        {{#each this.age}}
-                        {{this}}&nbsp;
-                        {{/each}}
+                        {{this.age}}
                     </p>
 
                     <p class="event-budget">Budget:
-                        {{#each this.budget}}
-                        {{this}}&nbsp;
-                        {{/each}}
+                        {{this.budget}}
                     </p>
 
                     <p class="event-interest">Interest:
@@ -48,6 +46,12 @@
                     </p>
 
                 </div>
+                <div>
+                <a class="delete" href="/delete-event/{{this._id}}">Delete</a>
+            </div>
+            <div>
+                <a class="uptdate" href="/edit-event/{{this._id}}">Update</a>
+            </div>
             </div>
             {{/each}}
 

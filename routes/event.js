@@ -93,4 +93,48 @@ router.get("/event/:id", (req, res) => {
     .catch(err => console.log(err));
 });
 
+// edit 
+
+router.get("/edit-event/:id", (req, res) => {
+  eventModel.findById(req.params.id)
+  .populate("product")
+  .then(dbRes => {
+    productModel.find().then(products => {
+      res.render("event_edit", {
+        events: dbRes,
+        products: dbRes,
+        css: ["event"]
+      });
+    });
+  })
+  .catch(dbErr => console.log(dbErr));
+});
+
+router.post("/edit-event", (req, res, next) => {
+  const newEvent = {
+    _id: req.params.id,
+    name: req.body.name,
+    type: req.body.type,
+    age: req.body.age,
+    budget: req.body.budget,
+    interest: req.body.interest
+  };
+newEvent.updateOne({_id: req.params.id})
+.then(dbRes => {
+  req.flash("success", "event successfully updated");
+  res.redirect("/events");
+});
+})
+
+
+
+// delete 
+
+router.get("/delete-event/:id", (req, res) => {
+  eventModel.findByIdAndDelete(req.params.id).then(dbRes => {
+    req.flash("success", "event successfully deleted");
+    res.redirect("/events");
+  });
+});
+
 module.exports = router;
