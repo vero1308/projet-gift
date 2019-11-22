@@ -14,16 +14,12 @@
   margin-bottom: 1.1rem;
 }
 
-.add-event-form {
-  margin : 20px;
-}
-
 .input-text {
   width: 300px;
 }
 
 .event-title {
-  margin-bottom : 20px;
+  margin-bottom: 20px;
 }
 
 .interests {
@@ -34,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: 60px; 
+  padding-top: 60px;
   background-image: url(https://res.cloudinary.com/dfnnpxhx9/image/upload/v1574365212/gift/18044.15.92_ml_rsbnl6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,5 +48,6 @@
   padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 5px 5px darkslateblue;
-  width: 500px;
+  width: 700px;
+  margin: 50px;
 }

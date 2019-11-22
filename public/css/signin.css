@@ -1,6 +1,6 @@
 #info_signin {
   background-size: cover;
-  background-image: url(/images/cadeau-enveloppé-pour-noël-ou-tout-autre-traîneau-différent-d-occasion-et-en-bois-132806229.jpg);
+  background-image: url(https://res.cloudinary.com/dfnnpxhx9/image/upload/v1574351340/gift/confetti-background_53876-63965_vu62xd.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 #signin_box {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
   border: 2px solid grey;
   border-radius: 10px;
@@ -17,6 +17,7 @@
   background-color: white;
   box-shadow: 0px 0px 5px 5px darkslateblue;
   width: 500px;
+  height: 600px;
 }
 
 #form {

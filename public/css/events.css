@@ -10,6 +10,8 @@
 #events-all {
   background-image: url(/images/canon-confettis-rose-baby-shower-gender-reveal_1024x1024.jpg);
   background-size: cover;
+  height: 100%;
+  padding-bottom: 20px;
 }
 /* .big-container {
   display: flex;
@@ -19,7 +21,7 @@
 .events-title {
   margin-right: 0;
   margin-left: 0;
-  margin-top: 80px;
+  margin-top: 60px;
   background-color: white;
   left: 0;
   right: 0;
@@ -31,7 +33,7 @@
 .events-subtitle {
   margin-bottom: 10px;
   margin-left: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 40px;
 }
 
@@ -57,17 +59,12 @@
   padding: 10px;
   border-radius: 20px;
   background-color: white;
-  width: 80%;
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  left: 0;
-  right: 0; */
+  width: 800px;
   display: grid;
   grid-template-columns: 40% 60%;
   grid-gap: 10px;
-  justify-items: center;
-  padding: 5px;
+  justify-items: left;
   text-align: justify;
 }
 
@@ -84,4 +81,10 @@
 .text {
   grid-column-start: 2;
   grid-row: 1;
+  text-align: left;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
 }
