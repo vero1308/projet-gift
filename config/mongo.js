@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // hey express, i would like to use mongoose to get a connection to my mongodb server
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
