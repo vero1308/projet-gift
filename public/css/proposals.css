@@ -1,6 +1,26 @@
+
+.big-proposals {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #DAB;
+}
+
+.proposal-title {
+    margin-top: 60px;
+    padding-left: 20px;
+    background-image: url(https://res.cloudinary.com/dfnnpxhx9/image/upload/v1574374193/gift/arcade-cards-gifts-header_imxnnq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+}
+
 .proposals {
     display: grid;
     grid-template-columns: 30% 30% 30%;
+    margin-top: 20px;
 }
 
 .all-proposals {
@@ -8,9 +28,14 @@
     margin : 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .product-description {
@@ -19,5 +44,20 @@
 }
 
 .product-image {
+    text-align: center;
+}
+
+.product-budget {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: bolder;
+}
+
+#inside {
+    margin-top : 15px;
     text-align: center;
 }

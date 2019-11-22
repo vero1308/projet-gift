@@ -1,19 +1,19 @@
-<div class="big-container">
+<div class="big-container-checkbox">
     <form action="/create-event" method="post" class="add-event-form" enctype="multipart/form-data">
         {{#if msg}}
         <p class="msg {{msg.status}}">{{msg.txt}}</p>
         {{/if}}
         <h1 class="event-title">Create a new event for a relative </h1>
         <div class="form-item-wrapper flexed-item">
-            <label for="name" class="name label">Your event name</label>
+            <label for="name" class="name label" id="check">Your event name</label>
             <input name="name" id="name" type="text" class="input-text" placeholder="ex: Tatie Danielle's Birthday">
         </div>
         <div class="form-item-wrapper flexed-item">
-            <label for="event-image" class="image label">Image</label>
+            <label for="event-image" class="image-label"  id="check">Image</label>
             <input name="image" id="event-image" type="file" class="event-image">
         </div>
         <div class="form-item-wrapper flexed-item">
-            <label for="type" class="type label">Event</label>
+            <label for="type" class="type label"  id="check">Event</label>
             <select name="type" id="category" class="select" required>
                 <option value="-1" disabled selected>Choose a category</option>
                 <option value="Baby shower">Baby Shower</option>
@@ -25,7 +25,7 @@
             </select>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <label for="age" class="age">Age</label>
+            <label for="age" class="age"  id="check">Age</label>
             <select name="age" id="age" class="select" required>
                 <option value="-1" disabled selected>Choose a category</option>
                 <option value="0-4">0-4 years</option>
@@ -37,7 +37,7 @@
             </select>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <label for="budget" class="budget">Budget</label>
+            <label for="budget" class="budget"  id="check">Budget</label>
             <select name="budget" id="budget" class="select" required>
                 <option value="-1" disabled selected>Choose a category</option>
                 <option value="10€-49€">10€-49€-</option>
@@ -49,6 +49,7 @@
                 <option value="1000€ and more">1000€ and more</option>
             </select>
         </div>
+        <div class="interests">
         <fieldset>
             <legend class="legend">Choose 3 interests max</legend>
             <div>
@@ -95,7 +96,8 @@
                 <input type="checkbox" id="wellbeing" name="interest" value="Wellbeing">
                 <label for="wellbeing">Wellbeing</label>
             </div>
-            <div>
+            </div>
+              <div>
                 <button id="btn_new_tag" class="test-button">Create your event</button>
             </div>
 </div>

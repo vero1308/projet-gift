@@ -64,7 +64,7 @@ router.post("/signin", cloudinary.single("avatar"), (req, res) => {
         req.flash("success", `welcome ${dbRes.email}`);
         req.session.currentUser = dbRes; // user is now in session... until session.destroy
 
-        return res.redirect("/events");
+        return res.render("event");
       } else {
         // encryption says : password match failde
         req.flash("error", "wrong credentials");

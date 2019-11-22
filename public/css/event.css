@@ -25,3 +25,32 @@
 .event-title {
   margin-bottom : 20px;
 }
+
+.interests {
+  margin-bottom: 20px;
+}
+
+.big-container-checkbox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 60px; 
+  background-image: url(https://res.cloudinary.com/dfnnpxhx9/image/upload/v1574365212/gift/18044.15.92_ml_rsbnl6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#check {
+  margin-right: 10px;
+}
+
+.add-event-form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px darkslateblue;
+  width: 500px;
+}

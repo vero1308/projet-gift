@@ -1,18 +1,22 @@
-<h1>Proposals</h1>
+<div class="proposal-title"><h1>Proposals</h1></div>
+
+<div class="big-proposals">
 
 <div id="proposal_grid" class="proposals">
     {{#each events.proposals}}
     <div class="all-proposals">
-    <div class="product-image">
+    <div class="product-image" id="inside">
         <img src="{{this.image}}" alt="{{this.name}}">
     </div>
-    <p class="product-name">{{this.name}}</p>
-    <p class="product-description">{{this.description}}</p>
-    <a href="{{this.links}}">See more</a>
-    <p class="product-event">{{this.event}}</p>
-    <p class="product-age">{{this.age}}</p>
-    <p class="product-budget">{{this.budget}}</p>
-    <p class="product-interest">{{this.interest}}</p>
+    <p class="product-name"  id="inside">{{this.name}}</p>
+    <p class="product-description" id="inside">{{this.description}}</p>
+    <a  id="inside" href="{{this.links}}">See more</a>
+    {{!-- <p class="product-event" id="inside">{{this.event}}</p>
+    <p class="product-age" id="inside">{{this.age}}</p>
+    <p class="product-budget" id="inside">{{this.budget}}</p>
+    <p class="product-interest" id="inside">{{this.interest}}</p> --}}
     </div>
     {{/each}}
+</div>
+</div>
 </div>
